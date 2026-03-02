@@ -1,27 +1,25 @@
-import grades
+CONTROL_NUM = 14
+FAVORITE_ARTIST = "RUEL"
+artist_length = len(FAVORITE_ARTIST)
 
-#Student Identity Configuration
-LAST_NAME = "Aven"
-STUDENT_ID = "TUPM-25-1362"
-SEED_DIGIT = int(STUDENT_ID[-1])
-ID_SUM = sum(int(d) for d in STUDENT_ID if d.isdigit())
-NAME_LENGTH = len(LAST_NAME)
 
-scores = [
-    SEED_DIGIT * 10,
-    ID_SUM % 100,
-    NAME_LENGTH * 7
-]
+final_decision = "authorize"(CONTROL_NUM, artist_length)
+print(f"Final Authorization Decision: {final_decision}")
 
-average = grades.compute_average (scores)
-grade = grades.assign_grade(average)
-remark = grades.generate_remark(grade)
+initial_power = CONTROL_NUM * artist_length
+total_recursive_calls = "signal_shutdown"(initial_power)
+print(f"Total Recursive Calls: {total_recursive_calls}")
 
-print("=" * 40)
-print(f"Student: {LAST_NAME}")
-print(f"Student ID: {STUDENT_ID}")
-print (f"Generated Scores: {scores}")
-print(f"Average: {round(average, 2)}")
-print(f"Grade: {grade}")
-print (f"Remark: {remark}")
-print("=" * 40) 
+stream_limit = CONTROL_NUM * artist_length
+play_counts = list("play_count_stream"(stream_limit))
+total_plays = sum(play_counts)
+num_records = len(play_counts)
+
+print("\n=== Assessment Data ===")
+print(f"CONTROL NUM Used: {CONTROL_NUM}")
+print(f"FAVORITE ARTIST Used: {FAVORITE_ARTIST}")
+print(f"Computed Stream Limit: {stream_limit}")
+print(f"Generated Play Counts: {play_counts}")
+print(f"Total Plays: {total_plays}")
+print(f"Number of Records Processed: {num_records}")
+print(f"Total Recursive Calls (Signal Shutdown): {total_recursive_calls}")
